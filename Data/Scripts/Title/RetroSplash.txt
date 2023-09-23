@@ -100,8 +100,8 @@ end event
 event ObjectStartup
 switch engine.deviceType
 case STANDARD
-	LoadSpriteSheet("Title/RetroLogo.gif")
-	SpriteFrame(-215, -120, 424, 240, 0, 0) // #1 - The Logo itself
+    LoadSpriteSheet("Title/RetroLogoMobile.gif")
+	SpriteFrame(-215, -120, 624, 240, 0, 0) // #1 - The Logo itself
 	break
 case MOBILE
     LoadSpriteSheet("Title/RetroLogoMobile.gif")
@@ -110,8 +110,8 @@ case MOBILE
 end switch
 
 if screen.xsize == 320
-  LoadSpriteSheet("Title/RetroLogoClassic.gif")
-  SpriteFrame(-215, -120, 324, 240, 0, 0) // #3 - The Logo itself (classic) 
+    LoadSpriteSheet("Title/RetroLogoMobile.gif")
+	SpriteFrame(-215, -120, 624, 240, 0, 0) //  #3 - The Logo itself (classic) 
 end if
 
 	//Setup any Retro Logo
