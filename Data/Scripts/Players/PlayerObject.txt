@@ -2361,6 +2361,13 @@ public function Player_Action_Peelout
 	player.state		= Player_State_Peelout
 	player.abilityTimer = 0
 	PlaySfx(SfxName[Peelout Charge], false) 	
+
+	CreateTempObject(TypeName[Dust Puff], player.entityPos, player.xpos, player.ypos)
+	object[tempObjectPos].iypos = player.collisionBottom
+	object[tempObjectPos].ypos += player.ypos
+	object[tempObjectPos].frame = 4
+	object[tempObjectPos].drawOrder = 4
+	object[tempObjectPos].direction = player.direction
 end function
 
 
@@ -2404,18 +2411,8 @@ public function Player_State_Peelout
 		temp0  /= 6
 		if player.abilityTimer > 0x9FFFF
 			player.animation = ANI_PEELOUT
-			if ringTimer == 0
-				CreateTempObject(TypeName[Dust Puff], 0, player.xpos, player.ypos)
-				object[tempObjectPos].iypos += player.collisionBottom
-				object[tempObjectPos].drawOrder = player.sortedDrawOrder
-			end if
 		else
 			player.animation = ANI_RUNNING
-			if ringTimer == 0
-				CreateTempObject(TypeName[Dust Puff], 0, player.xpos, player.ypos)
-				object[tempObjectPos].iypos += player.collisionBottom
-				object[tempObjectPos].drawOrder = player.sortedDrawOrder
-			end if
 		end if
 	end if
 	
@@ -2423,6 +2420,7 @@ public function Player_State_Peelout
 	if player.up == false
 		player.scrollDelay = 15
 		screen.camerastyle = CAMERASTYLE_EXTENDED
+		screen.shakeY = 6
 
 		player.state = Player_State_Ground
 		// Cancels the peel out if you didn't charged it enough
