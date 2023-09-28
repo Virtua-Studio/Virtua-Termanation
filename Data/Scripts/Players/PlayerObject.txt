@@ -2404,8 +2404,18 @@ public function Player_State_Peelout
 		temp0  /= 6
 		if player.abilityTimer > 0x9FFFF
 			player.animation = ANI_PEELOUT
+			if ringTimer == 0
+				CreateTempObject(TypeName[Dust Puff], 0, player.xpos, player.ypos)
+				object[tempObjectPos].iypos += player.collisionBottom
+				object[tempObjectPos].drawOrder = player.sortedDrawOrder
+			end if
 		else
 			player.animation = ANI_RUNNING
+			if ringTimer == 0
+				CreateTempObject(TypeName[Dust Puff], 0, player.xpos, player.ypos)
+				object[tempObjectPos].iypos += player.collisionBottom
+				object[tempObjectPos].drawOrder = player.sortedDrawOrder
+			end if
 		end if
 	end if
 	
@@ -3115,8 +3125,18 @@ public function Player_State_Ground
 				else
 					if player.speed > 0x9FFFF
 						player.animation = ANI_PEELOUT
+						if ringTimer == 0
+							CreateTempObject(TypeName[Dust Puff], 0, player.xpos, player.ypos)
+							object[tempObjectPos].iypos += player.collisionBottom
+							object[tempObjectPos].drawOrder = player.sortedDrawOrder
+						end if
 					else
 						player.animation = ANI_RUNNING
+						if ringTimer == 0
+							CreateTempObject(TypeName[Dust Puff], 0, player.xpos, player.ypos)
+							object[tempObjectPos].iypos += player.collisionBottom
+							object[tempObjectPos].drawOrder = player.sortedDrawOrder
+						end if
 					end if
 					CallFunction(Player_HandleRunAnimSpeed)
 				end if
@@ -3127,8 +3147,18 @@ public function Player_State_Ground
 				else
 					if player.speed < -0x9FFFF
 						player.animation = ANI_PEELOUT
+						if ringTimer == 0
+							CreateTempObject(TypeName[Dust Puff], 0, player.xpos, player.ypos)
+							object[tempObjectPos].iypos += player.collisionBottom
+							object[tempObjectPos].drawOrder = player.sortedDrawOrder
+						end if
 					else
 						player.animation = ANI_RUNNING
+						if ringTimer == 0
+							CreateTempObject(TypeName[Dust Puff], 0, player.xpos, player.ypos)
+							object[tempObjectPos].iypos += player.collisionBottom
+							object[tempObjectPos].drawOrder = player.sortedDrawOrder
+						end if
 					end if
 					CallFunction(Player_HandleRunAnimSpeed)
 				end if
