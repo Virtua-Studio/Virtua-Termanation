@@ -351,7 +351,7 @@ event ObjectDraw
 		// Blue BG Rect
 		DrawRect(0, 0, screen.xsize, object.blueRectPos, 0x18, 0x18, 0x20, 0xFF)
 
-		DrawRect(0, object.blueRectPos, screen.xsize, screen.ysize, 0x00, 0x00, 0x00, 0xFF)
+		DrawRect(0, object.blueRectPos, screen.xsize, screen.ysize,  0x18, 0x18, 0x20, 0xFF)
 
 #platform: USE_STANDALONE
 		if options.vsMode == true
@@ -363,7 +363,7 @@ event ObjectDraw
 #endplatform
 
 		// Yellow Rect
-		//DrawRect(object.yellowRectPos, 168, screen.xsize, 72, 0xE0, 0xE0, 0x00, 0xFF)
+		DrawRect(object.yellowRectPos, 168, screen.xsize, 72, 0xE0, 0xE0, 0x00, 0xFF)
  
  		// "Sonic The Hedgehog" Text
 		temp0 = object.yellowRectPos
@@ -494,7 +494,7 @@ LoadSpriteSheet("Global/TitleCard.gif")
 	SpriteFrame(0, -8, 16, 24, 60, 51)		// X
 	SpriteFrame(0, -8, 16, 24, 86, 26)		// Y
 	SpriteFrame(0, -8, 16, 24, 103, 26)		// Z
-	SpriteFrame(0, 0, 8, 256, 248, 0)	// Red Sidebar - #26
+	SpriteFrame(0, 0, 18, 256, 256, 0)	// Red Sidebar - #26
 SpriteFrame(18, 30, 72, 24, 176, 60)	// ZONE
 	SpriteFrame(68, 60, 49, 32, 120, 26)	// ACT 1
 	SpriteFrame(68, 60, 49, 32, 170, 26)	// ACT 2
