@@ -49,6 +49,7 @@ event ObjectUpdate
 		case RETROLOGO_INITIALISE
 			LoadPalette("RetroLogo.act", 0, 0, 0, 256)
 			logo.state = 1
+			PlaySfx(SfxName[DCSplash], false)
 			object.whatever = 256
 			SetScreenFade(0x00, 0x00, 0x00, 0xFF, 0x00, 0xFF)
 			break
@@ -100,18 +101,18 @@ end event
 event ObjectStartup
 switch engine.deviceType
 case STANDARD
-    LoadSpriteSheet("Title/RetroLogoMobile.gif")
-	SpriteFrame(-215, -120, 624, 240, 0, 0) // #1 - The Logo itself
+	LoadSpriteSheet("Splash/RetroLogo.gif")
+	SpriteFrame(-215, -120, 426, 240, 0, 0) // #1 - The Logo itself
 	break
-case MOBILE
-    LoadSpriteSheet("Title/RetroLogoMobile.gif")
-	SpriteFrame(-215, -120, 624, 240, 0, 0) // #2 - The Logo itself (mobile)
-     break
+	case MOBILE
+    LoadSpriteSheet("Splash/RetroLogoMobile.gif")
+    SpriteFrame(-215, -120, 500, 240, 0, 0) // #2 - The Logo itself (mobile)
+    break
 end switch
 
 if screen.xsize == 320
-    LoadSpriteSheet("Title/RetroLogoMobile.gif")
-	SpriteFrame(-215, -120, 624, 240, 0, 0) //  #3 - The Logo itself (classic) 
+  LoadSpriteSheet("Splash/RetroLogoClassic.gif")
+  SpriteFrame(-215, -120, 320, 240, 0, 0) //  #3 - The Logo itself (classic) 
 end if
 
 	//Setup any Retro Logo

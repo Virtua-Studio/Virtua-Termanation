@@ -652,7 +652,7 @@ event ObjectStartup
 
 	options.touchControls = false
 
-	SetMusicTrack("Options.ogg", 0, true)
+	SetMusicTrack("MainMenu.ogg", 0, true)
 
 	// Setup menu 1 (left column)
 	SetupMenu(MENU_1, 0, 3, 1)
