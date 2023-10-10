@@ -235,7 +235,7 @@ private function HUD_Draw_Standard
 					break
 			end switch
 			// X between icon and number
-			DrawSpriteScreenXY(20, 38, 222)
+			DrawSpriteScreenXY(20, 37, 222)
 
 			// The actual player lives number
 			DrawNumbers(24, 56, 220, player.lives, 2, 8, false)
@@ -461,7 +461,7 @@ event ObjectStartup
 	SpriteFrame(0, 0, 16, 16, 117, 18) 	// #17 - Knuckles life icon
 	SpriteFrame(0, 0, 8, 8, 1, 98) 		// #18 - Yellow X Debug Icon
 	SpriteFrame(0, 0, 8, 8, 10, 98) 	// #19 - Yellow Y Debug Icon
-	SpriteFrame(0, 0, 6, 6, 19, 98) 	// #20 - Small white x Debug Icon
+	SpriteFrame(0, 0, 7, 7, 49, 73) 	// #20 - Small white x Debug Icon
 
 	SpriteFrame(0, 0, 31, 8, 185, 17) 	// #21 - Sonic name tag
 
@@ -474,16 +474,16 @@ event ObjectStartup
 
 	SpriteFrame(0, 0, 31, 7, 217, 26) 	// #23 - Knuckles name tag
 
-	SpriteFrame(0, 0, 8, 8, 37, 64) 	// #24 - Small number 0
-	SpriteFrame(0, 0, 8, 8, 46, 64) 	// #25 - Small number 1
-	SpriteFrame(0, 0, 8, 8, 55, 64) 	// #26 - Small number 2
-	SpriteFrame(0, 0, 8, 8, 64, 64) 	// #27 - Small number 3
-	SpriteFrame(0, 0, 8, 8, 73, 64) 	// #28 - Small number 4
-	SpriteFrame(0, 0, 8, 8, 82, 64) 	// #29 - Small number 5
-	SpriteFrame(0, 0, 8, 8, 91, 64) 	// #30 - Small number 6
-	SpriteFrame(0, 0, 8, 8, 100, 64) 	// #31 - Small number 7
-	SpriteFrame(0, 0, 8, 8, 109, 64) 	// #32 - Small number 8
-	SpriteFrame(0, 0, 8, 8, 118, 64) 	// #33 - Small number 9
+	SpriteFrame(0, 1, 8, 8, 37, 64) 	// #24 - Small number 0
+	SpriteFrame(0, 1, 8, 8, 46, 64) 	// #25 - Small number 1
+	SpriteFrame(0, 1, 8, 8, 55, 64) 	// #26 - Small number 2
+	SpriteFrame(0, 1, 8, 8, 64, 64) 	// #27 - Small number 3
+	SpriteFrame(0, 1, 8, 8, 73, 64) 	// #28 - Small number 4
+	SpriteFrame(0, 1, 8, 8, 82, 64) 	// #29 - Small number 5
+	SpriteFrame(0, 1, 8, 8, 91, 64) 	// #30 - Small number 6
+	SpriteFrame(0, 1, 8, 8, 100, 64) 	// #31 - Small number 7
+	SpriteFrame(0, 1, 8, 8, 109, 64) 	// #32 - Small number 8
+	SpriteFrame(0, 1, 8, 8, 118, 64) 	// #33 - Small number 9
 
 	SpriteFrame(-16, 0, 8, 8, 127, 64) 	// #34 - Small debug Plus sign
 	SpriteFrame(8, 0, 8, 8, 136, 64) 	// #35 - Small debug Minus sign
