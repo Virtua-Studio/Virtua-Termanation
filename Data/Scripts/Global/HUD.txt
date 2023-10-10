@@ -463,7 +463,7 @@ event ObjectStartup
 	SpriteFrame(0, 0, 8, 8, 10, 98) 	// #19 - Yellow Y Debug Icon
 	SpriteFrame(0, 0, 6, 6, 19, 98) 	// #20 - Small white x Debug Icon
 
-	SpriteFrame(0, 0, 31, 7, 185, 18) 	// #21 - Sonic name tag
+	SpriteFrame(0, 0, 31, 8, 185, 17) 	// #21 - Sonic name tag
 
 	// Tails or Miles
 	if options.region == false
